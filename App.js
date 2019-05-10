@@ -1,21 +1,18 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import Login from "./components/Login";
+import Chat from "./components/Chat";
+// Import React Navigation
+import { createStackNavigator, createAppContainer } from "react-navigation";
+// Create the navigator
+// export default createStackNavigator({
+//   Login: Login,
+//   Chat: Chat
+// });
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+const RootStack = createStackNavigator({
+  Login: { screen: Login },
+  Chat: { screen: Chat }
 });
+
+const App = createAppContainer(RootStack);
+
+export default App;
