@@ -1,4 +1,5 @@
 import Login from "./components/Login";
+import CreateAccount from "./components/CreateAccount";
 import Chat from "./components/Chat";
 // Import React Navigation
 import { createStackNavigator, createAppContainer } from "react-navigation";
@@ -10,6 +11,7 @@ import { createStackNavigator, createAppContainer } from "react-navigation";
 
 const RootStack = createStackNavigator({
   Login: { screen: Login },
+  CreateAccount: { screen: CreateAccount },
   Chat: { screen: Chat }
 });
 
